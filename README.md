@@ -39,7 +39,7 @@ The variable names in `.env.example` are this repository's storage convention.
 
 ## Dedicated development VM
 
-The shared development VM runs in GCP project `rlfp-2`, zone `us-central1-a`. See [VM.md](VM.md) for terminal access, the persistent Chrome desktop, and start/stop commands.
+The shared development VM runs in GCP project `pvd-dev-232`, zone `us-central1-a`. See [VM.md](VM.md) for terminal access, the persistent Chrome desktop, and start/stop commands.
 
 ## Sources
 
