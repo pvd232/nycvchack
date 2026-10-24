@@ -4,7 +4,7 @@ Essential setup for [Deal Flow: NYC's First VC Hackathon](https://nyc-vc-hack.de
 
 ## Accounts and credits
 
-All five sponsor accounts are pending registration. Use one Nicrron/Ninoo account and one PRISM workspace per team.
+Sponsor registrations were skipped at the owner's request. Use one Nicrron/Ninoo account and one PRISM workspace per team.
 
 | Service | Signup | Offer / code | Input needed |
 | --- | --- | --- | --- |
@@ -39,20 +39,7 @@ The variable names in `.env.example` are this repository's storage convention.
 
 ## Dedicated development VM
 
-Requested: one persistent GCP VM accessible to approved identities from other GCP projects. Provisioning is pending GCP reauthentication, the host project, and the caller identities.
-
-Proposed starting size: 2 vCPUs, 8 GB RAM, Ubuntu 24.04, and a 100 GB persistent disk. Keep separate project checkouts and a persistent remote browser profile.
-
-Use OS Login and IAP for SSH. Grant named users or service accounts access in the host project; grant the VM's workload identity access to other projects only for the APIs it needs. Verify outbound internet access for browser and package downloads.
-
-Connection template after provisioning:
-
-```bash
-gcloud compute ssh shared-dev \
-  --project="$VM_HOST_PROJECT" \
-  --zone="$VM_ZONE" \
-  --tunnel-through-iap
-```
+The shared development VM runs in GCP project `rlfp-2`, zone `us-central1-a`. See [VM.md](VM.md) for terminal access, the persistent Chrome desktop, and start/stop commands.
 
 ## Sources
 
